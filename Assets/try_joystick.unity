@@ -881,7 +881,7 @@ MonoBehaviour:
   m_text: "\u8A2D\u5B9A"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0b5b1c8b3a539504ba71bf4b9c069331, type: 2}
-  m_sharedMaterial: {fileID: -1979727837952677783, guid: 0b5b1c8b3a539504ba71bf4b9c069331,
+  m_sharedMaterial: {fileID: 4876588417219760978, guid: 0b5b1c8b3a539504ba71bf4b9c069331,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1690,7 +1690,7 @@ MonoBehaviour:
   m_text: "\u3042\u3051\u308B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0b5b1c8b3a539504ba71bf4b9c069331, type: 2}
-  m_sharedMaterial: {fileID: -1979727837952677783, guid: 0b5b1c8b3a539504ba71bf4b9c069331,
+  m_sharedMaterial: {fileID: 4876588417219760978, guid: 0b5b1c8b3a539504ba71bf4b9c069331,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5490,7 +5490,7 @@ MonoBehaviour:
   m_text: "\u4E00\u6642\u505C\u6B62"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0b5b1c8b3a539504ba71bf4b9c069331, type: 2}
-  m_sharedMaterial: {fileID: -1979727837952677783, guid: 0b5b1c8b3a539504ba71bf4b9c069331,
+  m_sharedMaterial: {fileID: 4876588417219760978, guid: 0b5b1c8b3a539504ba71bf4b9c069331,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5515,7 +5515,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 53.2
+  m_fontSize: 53.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6386,7 +6386,7 @@ MonoBehaviour:
   m_text: "\xD7\u25CB\u25CB"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0b5b1c8b3a539504ba71bf4b9c069331, type: 2}
-  m_sharedMaterial: {fileID: -1979727837952677783, guid: 0b5b1c8b3a539504ba71bf4b9c069331,
+  m_sharedMaterial: {fileID: 4876588417219760978, guid: 0b5b1c8b3a539504ba71bf4b9c069331,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6666,7 +6666,7 @@ MonoBehaviour:
   m_text: "\xD7\u25CB\u25CB"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0b5b1c8b3a539504ba71bf4b9c069331, type: 2}
-  m_sharedMaterial: {fileID: -1979727837952677783, guid: 0b5b1c8b3a539504ba71bf4b9c069331,
+  m_sharedMaterial: {fileID: 4876588417219760978, guid: 0b5b1c8b3a539504ba71bf4b9c069331,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -8063,7 +8063,7 @@ MonoBehaviour:
   m_text: "\u3042\u3051\u308B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0b5b1c8b3a539504ba71bf4b9c069331, type: 2}
-  m_sharedMaterial: {fileID: -1979727837952677783, guid: 0b5b1c8b3a539504ba71bf4b9c069331,
+  m_sharedMaterial: {fileID: 4876588417219760978, guid: 0b5b1c8b3a539504ba71bf4b9c069331,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -8189,15 +8189,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
+  m_RaycastTarget: 0
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\u653B\u6483"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0b5b1c8b3a539504ba71bf4b9c069331, type: 2}
-  m_sharedMaterial: {fileID: -1979727837952677783, guid: 0b5b1c8b3a539504ba71bf4b9c069331,
+  m_sharedMaterial: {fileID: 4876588417219760978, guid: 0b5b1c8b3a539504ba71bf4b9c069331,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -8243,11 +8243,11 @@ MonoBehaviour:
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
+  m_enableKerning: 0
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
+  m_isRichText: 0
+  m_parseCtrlCharacters: 0
   m_isOrthographic: 1
   m_isCullingEnabled: 0
   m_horizontalMapping: 0
@@ -8256,7 +8256,7 @@ MonoBehaviour:
   m_geometrySortingOrder: 0
   m_IsTextObjectScaleStatic: 0
   m_VertexBufferAutoSizeReduction: 1
-  m_useMaxVisibleDescender: 1
+  m_useMaxVisibleDescender: 0
   m_pageToDisplay: 1
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0

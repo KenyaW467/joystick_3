@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Chronos;
 
 public class MonsterController : MonoBehaviour
 {
@@ -16,11 +17,15 @@ public class MonsterController : MonoBehaviour
     public Slider monster_hpSlider;
 
     //gemeover画面
-    public GameObject director_obj;
+    GameObject director_obj;
 
     //宝箱管理オブジェクト
     [SerializeField]
     GameObject treasure_obj;
+
+    float random_speed;
+
+    private Timeline timeline;
 
     // Start is called before the first frame update
     void Start()
@@ -32,17 +37,22 @@ public class MonsterController : MonoBehaviour
         max_hitpoint = monster_hitpoint;
 
         director_obj = GameObject.Find("DirectorScript");
+        random_speed = Random.Range(-0.01f, 0.01f);
+
+        timeline = GetComponent<Timeline>();
     }
+
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         monster_hpSlider.value = monster_hitpoint / max_hitpoint;
 
-        float random_speed = Random.Range(-0.01f, 0.01f);
-        transform.Translate(0,-speed + random_speed, 0);
+        float movement = (-speed + random_speed) * timeline.deltaTime;
+
+        transform.Translate(0, movement, 0);
         if (monster_hitpoint < 0)
         {
-            director_obj.GetComponent<DirectorScript>().experience_point += (int)exp;
+            director_obj.GetComponent<DirectorScript>().enemy_num += 1;
             treasure_obj.GetComponent<TreasureboxManege>().treasurebox_create(transform.position, treasure_obj);
 
             Destroy(gameObject);

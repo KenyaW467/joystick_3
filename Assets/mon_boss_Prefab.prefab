@@ -383,6 +383,7 @@ GameObject:
   - component: {fileID: 6732479346132572535}
   - component: {fileID: 4777304572344879397}
   - component: {fileID: 1968478488438753610}
+  - component: {fileID: 8277719981398908930}
   m_Layer: 0
   m_Name: mon_boss_Prefab
   m_TagString: monster
@@ -486,8 +487,25 @@ MonoBehaviour:
   monster_hitpoint: 200
   exp: 1
   monster_lebel: 1
-  speed: 0.005
+  speed: 0.5
   monster_hpSlider: {fileID: 4259024531178394534}
   director_obj: {fileID: 0}
   treasure_obj: {fileID: 737681481980986346, guid: e81923f765da8ac4a89d7fdcd9ffccb2,
     type: 3}
+--- !u!114 &8277719981398908930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8782754528202996725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6090da511f8374135a15dd8655adcd44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _recordingInterval: 0.5
+  _mode: 1
+  _globalClockKey: Enemy
+  _rewindable: 1
+  _recordingDuration: 30

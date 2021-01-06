@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Chronos;
+using UnityEngine.SceneManagement;
 
 public class DirectorScript : MonoBehaviour
 {
@@ -19,7 +21,9 @@ public class DirectorScript : MonoBehaviour
 
     public GameObject bgmobj;
 
-    public float experience_point = 0;
+    public int enemy_num = 0;
+
+    public GlobalClock globalclock;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +36,7 @@ public class DirectorScript : MonoBehaviour
     {
         //gemeover画面の表示
         Time.timeScale = 0;
+        globalclock.paused = true;
         pause_flg = true;
         bgmobj.GetComponent<AudioSource>().Stop();
         gameover_panel.SetActive(true);
@@ -43,6 +48,7 @@ public class DirectorScript : MonoBehaviour
         if(pause_flg == false )
         {
             Time.timeScale = 0;
+            globalclock.paused = true;
             pause_flg = true;
             pause_se.GetComponent<AudioSource>().Play();
             pause_panel.SetActive(true);
@@ -50,6 +56,7 @@ public class DirectorScript : MonoBehaviour
         else
         {
             Time.timeScale = 1;
+            globalclock.paused = false;
             pause_flg = false;
             pause_se.GetComponent<AudioSource>().Play();
             pause_panel.SetActive(false);
@@ -67,8 +74,10 @@ public class DirectorScript : MonoBehaviour
             gameover_window();
         }
     }
-    public void get_exp(int exp)
+
+    public void Status_reset()
     {
-        experience_point += exp;
+        Time.timeScale = 1;
+        SceneManager.LoadScene("try_joystick");
     }
 }

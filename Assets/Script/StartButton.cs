@@ -16,6 +16,7 @@ public class StartButton : MonoBehaviour
 
     public void OnClick()
     {
+        PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("try_joystick");
     }
 }

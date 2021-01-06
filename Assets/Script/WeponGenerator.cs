@@ -11,6 +11,7 @@ public class WeponGenerator : MonoBehaviour
     public float wepon_create_time = 1.0f;
     public float auto_wepon_power = 30;
     public float click_wepon_power = 60;
+    string[] saveStringList = new string[3];/*キャラ情報の保存*/
 
     float delta = 0;
 
@@ -20,6 +21,20 @@ public class WeponGenerator : MonoBehaviour
     void Start()
     {
         director_obj = GameObject.Find("DirectorScript");
+        wepon_create_time = PlayerPrefs.GetFloat("wepon_create_time", wepon_create_time);
+        auto_wepon_power = PlayerPrefs.GetFloat("auto_wepon_power", auto_wepon_power);
+        click_wepon_power = PlayerPrefs.GetFloat("click_wepon_power", click_wepon_power);
+    }
+
+    public void Continue_parameterset()
+    {
+        PlayerPrefs.SetFloat("wepon_create_time", wepon_create_time);
+        PlayerPrefs.SetFloat("auto_wepon_power", auto_wepon_power);
+        PlayerPrefs.SetFloat("click_wepon_power", click_wepon_power);
+    }
+    public void Reset_parameterset()
+    {
+        PlayerPrefs.DeleteAll();
     }
 
     // Update is called once per frame
@@ -33,12 +48,6 @@ public class WeponGenerator : MonoBehaviour
             {
                 this.delta = 0;
                 create_weapon_auto(/*武器の攻撃力*/);
-            }
-
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                /*spaceキー押下*/
-                create_weapon_click(/*武器の攻撃力*/);
             }
         }
     }

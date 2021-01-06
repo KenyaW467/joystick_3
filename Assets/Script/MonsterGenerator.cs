@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Chronos;
 
 public class MonsterGenerator : MonoBehaviour
 {
@@ -22,18 +23,22 @@ public class MonsterGenerator : MonoBehaviour
     float delta = 0;
     float base_monster_lebel = 1.0f;
 
+    private Timeline timeline;
+
 
     // Start is called before the first frame update
     void Start()
     {
         span_slider = GameObject.Find("GenerateSpanSlider");
         //span_max = span_slider.
+
+        timeline = GetComponent<Timeline>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        delta += Time.deltaTime;
+        delta += timeline.deltaTime;
         if (delta > span)
         {
             delta = 0;

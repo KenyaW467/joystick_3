@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Chronos;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class DirectorScript : MonoBehaviour
 {

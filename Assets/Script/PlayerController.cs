@@ -12,9 +12,12 @@ public class PlayerController : MonoBehaviour
     public FloatingJoystick variableJoystick;
 
     //gemeover画面
+    //[SerializeField]
+    //GameObject director_obj;
     [SerializeField]
-    GameObject director_obj;
-
+    DirectorScript directorScript;
+    [SerializeField]
+    CanvasScript canvasScript;
     //宝箱関係
     [SerializeField]
     GameObject tresuresound_obj;
@@ -38,7 +41,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (director_obj.GetComponent<DirectorScript>().pause_flg != true)
+        if (directorScript.pause_flg != true)
         {
             /*キャラクターの移動制御*/
             if (Input.GetKey("up"))
@@ -94,14 +97,17 @@ public class PlayerController : MonoBehaviour
                     {
                         case 0:
                             weponGenerator.wepon_create_time *= 0.99f;
+                            canvasScript.box_open_text("Auto：生成速度小アップ");
                             break;
 
                         case 1:
                             weponGenerator.auto_wepon_power *= 1.025f;
+                            canvasScript.box_open_text("Auto：攻撃力小アップ");
                             break;
 
                         case 2:
                             weponGenerator.click_wepon_power *= 1.05f;
+                            canvasScript.box_open_text("Click：攻撃力小アップ");
                             break;
 
                         default:
@@ -117,14 +123,17 @@ public class PlayerController : MonoBehaviour
                     {
                         case 0:
                             weponGenerator.wepon_create_time *= 0.9f;
+                            canvasScript.box_open_text("Auto：生成速度大アップ");
                             break;
 
                         case 1:
                             weponGenerator.auto_wepon_power *= 2.0f;
+                            canvasScript.box_open_text("Auto：攻撃力大アップ");
                             break;
 
                         case 2:
                             weponGenerator.click_wepon_power *= 1.5f;
+                            canvasScript.box_open_text("Click：攻撃力大アップ");
                             break;
 
                         default:
@@ -139,5 +148,4 @@ public class PlayerController : MonoBehaviour
         treasurenum1.text_update();
         treasurenum2.text_update();
     }
-
 }

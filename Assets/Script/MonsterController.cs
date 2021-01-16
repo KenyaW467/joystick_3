@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Chronos;
+using TMPro;
 
 public class MonsterController : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class MonsterController : MonoBehaviour
 
     //　HP表示用スライダー
     public Slider monster_hpSlider;
+
+    //LV表示
+    [SerializeField]
+    TextMeshProUGUI treasurenum_text;
 
     //gemeover画面
     GameObject director_obj;
@@ -40,6 +45,8 @@ public class MonsterController : MonoBehaviour
         random_speed = Random.Range(-0.01f, 0.01f);
 
         timeline = GetComponent<Timeline>();
+
+        treasurenum_text.text = "LV." + (int)monster_lebel;
     }
 
     // Update is called once per frame

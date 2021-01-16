@@ -678,7 +678,8 @@ MonoBehaviour:
   speed: 0.1
   pc_mode: 0
   variableJoystick: {fileID: 1398511282}
-  director_obj: {fileID: 337974679}
+  directorScript: {fileID: 337974680}
+  canvasScript: {fileID: 1343030554}
   tresuresound_obj: {fileID: 1336099952}
   treasurebox_lebel1_num: 0
   treasurebox_lebel2_num: 0
@@ -5955,12 +5956,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 78.8
+  m_fontSize: 65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 1
-  m_fontSizeMax: 150
+  m_fontSizeMax: 65
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -6535,6 +6536,7 @@ GameObject:
   - component: {fileID: 1343030552}
   - component: {fileID: 1343030551}
   - component: {fileID: 1343030550}
+  - component: {fileID: 1343030554}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -6627,6 +6629,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1343030554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343030549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8364e2b8023ec3c49ab83017c80604a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treasureopen_ui: {fileID: 6300293012201754698, guid: 6a69d0945903618488e493e785b09baa,
+    type: 3}
 --- !u!114 &1398511282 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8170153791668043265, guid: 0d230cc8be529a542a08cb878ab14b18,
@@ -9158,7 +9174,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u306F\u3058\u3081\u304B\u3089"
+  m_text: "\u30EA\u30BB\u30C3\u30C8\u3059\u308B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e0bf374c454f1264d8652bd24c192d6c, type: 2}
   m_sharedMaterial: {fileID: -8045993932472603874, guid: e0bf374c454f1264d8652bd24c192d6c,
@@ -9186,12 +9202,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64
+  m_fontSize: 53.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 1
-  m_fontSizeMax: 150
+  m_fontSizeMax: 65
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512

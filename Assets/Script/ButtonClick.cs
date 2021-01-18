@@ -19,11 +19,11 @@ public class ButtonClick : MonoBehaviour
             /*spaceキー押下*/
             attack_button.onClick.Invoke();
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
             box_lebel1_button.onClick.Invoke();
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
             box_lebel2_button.onClick.Invoke();
         }

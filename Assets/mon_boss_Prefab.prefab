@@ -620,7 +620,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monster_hitpoint: 200
-  exp: 1
   monster_lebel: 1
   speed: 0.5
   monster_hpSlider: {fileID: 4259024531178394534}

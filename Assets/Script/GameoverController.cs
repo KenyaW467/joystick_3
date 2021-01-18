@@ -41,6 +41,7 @@ public class GameoverController : MonoBehaviour
 
     void Update()
     {
+        transform.SetAsLastSibling();
         result_text.text = "今回倒した敵の数：" + directorScript.enemy_num.ToString() 
             + "\n" + "転生回数：" + resporn_num_window;
     }

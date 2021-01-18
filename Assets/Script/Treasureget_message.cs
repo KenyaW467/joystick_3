@@ -15,9 +15,9 @@ public class Treasureget_message : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.Translate(0, 3, 0);
+        transform.Translate(0, 1.5f, 0);
         //Debug.Log("open");
-        if (intial_pos.y + 200 < transform.position.y)
+        if (intial_pos.y + 120 < transform.position.y)
         {
             Destroy(gameObject);
         }

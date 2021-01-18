@@ -9,10 +9,9 @@ public class MonsterController : MonoBehaviour
 {
     float max_hitpoint;
 
-    public float monster_hitpoint = 100.0f;
-    public float exp = 1.0f;
+    public float monster_hitpoint = 50.0f;
     public float monster_lebel = 1.0f;
-    public float speed = 0.015f;
+    public float speed = 0.05f;
 
     //　HP表示用スライダー
     public Slider monster_hpSlider;
@@ -37,7 +36,6 @@ public class MonsterController : MonoBehaviour
     {
         //モンスターの強さ設定
         monster_hitpoint *= monster_lebel;
-        exp *= monster_lebel;
         //最大HPの設定
         max_hitpoint = monster_hitpoint;
 

@@ -620,9 +620,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monster_hitpoint: 100
-  exp: 1
   monster_lebel: 1
-  speed: 1
+  speed: 0.75
   monster_hpSlider: {fileID: 3578496421538152013}
   treasurenum_text: {fileID: 3288134493927426235}
   treasure_obj: {fileID: 4075750798524758391, guid: dff60712be43269458cadfd183777b07,
